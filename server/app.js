@@ -20,22 +20,22 @@ var pathToUse;
 //   console.log("devving")
 //   pathToUse = "../client/dev";
 // } else {
-  pathToUse = "/public/dist";
+  pathToUse = "public/dist";
 // }
 
 app.use(express.static(path.join(__dirname, pathToUse)));
 
 app.get("*", function(req, res) {
   // res.sendFile("index.html", {root: path.join(__dirname, pathToUse)});
-  res.sendFile("/public/dist/index.html", {root: __dirname});
+  res.sendFile(__dirname + 'public/dist/index.html');
 })
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
+// app.use(function(req, res, next) {
+//   var err = new Error('Not Found');
+//   err.status = 404;
+//   next(err);
+// });
 
 // error handler
 app.use(function(err, req, res, next) {
