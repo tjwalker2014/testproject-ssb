@@ -1,0 +1,38 @@
+@import "normalize";
+
+@include normalize();
+
+// Variables
+
+// Mixins
+@mixin xy-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin x-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin y-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+}
