@@ -16,12 +16,12 @@ app.use(cookieParser());
 
 // // Development Settings
 var pathToUse;
-// if (app.get('env')=='development') {
-//   console.log("devving")
-//   pathToUse = "../client/dev";
-// } else {
+if (app.get('env')=='development') {
+  console.log("devving")
+  pathToUse = "../client/dev";
+} else {
   pathToUse = "public/dist";
-// }
+}
 
 app.use(express.static(path.join(__dirname, pathToUse)));
 
