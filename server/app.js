@@ -20,7 +20,7 @@ var pathToUse;
 //   console.log("devving")
 //   pathToUse = "../client/dev";
 // } else {
-  pathToUse = "public/dist";
+  pathToUse = "/public/dist";
 // }
 
 app.use(express.static(path.join(__dirname, pathToUse)));
