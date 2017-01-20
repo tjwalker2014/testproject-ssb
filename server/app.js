@@ -1,5 +1,5 @@
 var express = require('express');
-var path = require('path');
+// var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
@@ -15,18 +15,20 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // // Development Settings
-var pathToUse;
+// var pathToUse;
 // if (app.get('env')=='development') {
 //   console.log("devving")
 //   pathToUse = "../client/dev";
 // } else {
-  pathToUse = "public/dist";
+  // pathToUse = "public/dist";
 // }
 
-app.use(express.static(path.join(__dirname, pathToUse)));
+// app.use(express.static(path.join(__dirname, pathToUse)));
+app.use(express.static(__dirname + '/public/dist'));
 
 app.get("*", function(req, res) {
-  res.sendFile("index.html", {root: path.join(__dirname, pathToUse)});
+  // res.sendFile("index.html", {root: path.join(__dirname, pathToUse)});
+  res.sendFile("public/index.html", {root: __dirname});
 })
 
 // catch 404 and forward to error handler
