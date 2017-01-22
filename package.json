@@ -6,7 +6,7 @@
     "postinstall": "gulp build",
     "start": "node ./bin/www"
   },
-  "devDependencies": {
+  "dependencies": {
     "gulp": "^3.9.1",
     "gulp-cache": "^0.4.5",
     "gulp-clean-css": "^2.0.13",
@@ -16,9 +16,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^2.0.0",
-    "run-sequence": "^1.2.2"
-  },
-  "dependencies": {
+    "run-sequence": "^1.2.2",
     "body-parser": "~1.15.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
