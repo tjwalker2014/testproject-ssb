@@ -15,16 +15,18 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // // Development Settings
-// var pathToUse;
-// if (app.get('env')=='development') {
-//   console.log("devving")
-//   pathToUse = "../client/dev";
-// } else {
-  // pathToUse = "public/dist";
-// }
+var pathToUse;
+if (app.get('env')=='development') {
+  console.log("devving")
+  pathToUse = "dev";
+} else {
+  pathToUse = "public/dist";
+}
 
+app.use(express.static((__dirname, pathToUse)));
 // app.use(express.static(path.join(__dirname, pathToUse)));
-app.use(express.static(__dirname + '/public/dist'));
+// app.use(express.static(__dirname + '/public/dist'));
+// app.use(express.static(__dirname + '/dev'));
 
 app.get("*", function(req, res) {
   // res.sendFile("index.html", {root: path.join(__dirname, pathToUse)});

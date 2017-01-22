@@ -10,28 +10,28 @@ var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 
 gulp.task('minify-images', function() {
-  return gulp.src('../client/dev/assets/images/*')
+  return gulp.src('dev/assets/images/*')
     .pipe(cache(imagemin()))
     .pipe(gulp.dest('public/dist/assets/images'))
 });
 
 gulp.task('sass', function() {
-  return gulp.src('../client/dev/assets/scss/main.scss')
+  return gulp.src('dev/assets/scss/main.scss')
     .pipe(plumber(function(error) {
         console.log(error);
         this.emit('end');
     }))
     .pipe(sass()) // Converts Sass to CSS with gulp-sass
-    .pipe(gulp.dest('../client/dev/assets/css'))
+    .pipe(gulp.dest('dev/assets/css'))
 });
 
 gulp.task('watch', function() {
-  return gulp.watch('../client/dev/assets/scss/**/*.scss', ['sass']);
+  return gulp.watch('dev/assets/scss/**/*.scss', ['sass']);
   // Other watchers
 });
 
 gulp.task('minify-js', function () {
-  return gulp.src(['../client/dev/assets/**/*.js'])
+  return gulp.src(['dev/assets/**/*.js'])
   .pipe(uglify())
   .pipe(rename(function(path) {
     path.dirname = "js";
@@ -41,14 +41,14 @@ gulp.task('minify-js', function () {
 });
 
 gulp.task('minify-css', function() {
-  return gulp.src('../client/dev/assets/css/main.css')
+  return gulp.src('dev/assets/css/main.css')
     .pipe(cleanCSS())
     .pipe(rename("main.min.css"))
     .pipe(gulp.dest('public/dist/assets/css'));
 });
 
 gulp.task('htmlreplace', function() {
-  return gulp.src('../client/dev/index.html')
+  return gulp.src('dev/index.html')
   .pipe(htmlreplace({
     'js': 'assets/js/main.min.js',
     "css": "assets/css/main.min.css"
@@ -57,7 +57,7 @@ gulp.task('htmlreplace', function() {
 });
 
 gulp.task('copy-favicons', function() {
-  return gulp.src('../client/dev/favicons/*')
+  return gulp.src('dev/favicons/*')
     .pipe(gulp.dest('public/dist/favicons'));
 });
 
