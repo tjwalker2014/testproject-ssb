@@ -653,8 +653,14 @@ body {
 h2, h3, p, ul {
   line-height: 1.25; }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
 li {
-  line-height: 1.25; }
+  line-height: 1.25;
+  list-style: none; }
 
 h2 {
   font-size: 4rem;
@@ -674,6 +680,9 @@ h3 {
 
 p, li {
   font-size: 1.6rem; }
+
+a {
+  color: inherit; }
 
 .landing-wrapper {
   text-align: center;
@@ -696,9 +705,6 @@ p, li {
   margin: 1rem auto;
   width: 6rem; }
 
-a {
-  color: inherit; }
-
 .landing-page-contact {
   display: block;
   padding: 0.5rem; }
@@ -709,27 +715,6 @@ a {
   transform: translateX(-50%);
   bottom: 1rem;
   width: 2rem; }
-
-#intro {
-  font-size: 1.6rem;
-  position: absolute;
-  color: white;
-  padding: 1rem 2rem;
-  width: 20rem;
-  font-weight: 300; }
-  #intro p:first-of-type {
-    font-size: 2.2rem;
-    margin: 0; }
-  #intro a {
-    display: inline-block;
-    text-decoration: none; }
-  #intro em {
-    font-weight: 500; }
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0; }
 
 #social-container1 {
   position: absolute;
@@ -885,6 +870,16 @@ footer ul {
 
 footer li {
   display: inline-block; }
+
+#tools ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; }
+  #tools ul li {
+    width: calc(100%/3); }
+    @media screen and (max-width: 320px) {
+      #tools ul li {
+        width: 100%; } }
 
 @keyframes spin {
   from {

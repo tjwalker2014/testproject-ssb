@@ -6,8 +6,9 @@ $(document).ready(function() {
     var $menuButton = $("#menu-button");
     var $menu = $("#menu");
     var $hamburgerInner = $(".hamburger-inner")
-    var $navlinks = $(".navlink");
+    var $navlink = $(".navlink");
     var $navlinkContainers = $(".navlink-container");
+    var $sectionLink = $(".section-link");
     var $revealProject = $(".reveal-project");
     var $project = $(".project");
 
@@ -20,20 +21,26 @@ $(document).ready(function() {
       toggleMenu();
       toggleMenuButtonActive($menuButton);
       // toggleBodyScroll();
-    })
+    });
 
-    $navlinks.click(function(event) {
+    $navlink.click(function(event) {
       event.preventDefault();
       var $navClicked = $($(this).attr("href"));
       toggleMenu();
       toggleMenuButtonActive($menuButton);
       scrollToContent($navClicked);
-    })
+    });
+
+    $sectionLink.click(function(event) {
+      event.preventDefault();
+      var $navClicked = $($(this).attr("href"));
+      scrollToContent($navClicked);
+    });
 
     $revealProject.click(function(event) {
       event.preventDefault();
       $project.slideToggle();
-    })
+    });
 
     // Function defs
     function scrollToContent($section) {
