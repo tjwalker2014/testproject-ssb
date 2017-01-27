@@ -625,6 +625,10 @@
     bottom: 0;
     transform: rotate(-90deg); }
 
+.quote {
+  font-style: italic;
+  padding: 1rem 0; }
+
 .inverted, nav {
   color: white;
   background-color: #03A9F4; }
@@ -655,8 +659,7 @@ h2, h3, p, ul {
 
 ul {
   list-style: none;
-  padding: 0;
-  margin: 0; }
+  padding: 0; }
 
 li {
   line-height: 1.25;
@@ -671,11 +674,11 @@ h2 {
       font-weight: 500; } }
 
 h3 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 400; }
   @media screen and (max-width: 320px) {
     h3 {
-      font-size: 2rem;
+      font-size: 1rem;
       font-weight: 500; } }
 
 p, li {
@@ -799,7 +802,7 @@ nav {
   padding: 6rem 0; }
   .content .text-container {
     padding: 0 1rem;
-    max-width: 42rem;
+    max-width: 44rem;
     margin: auto; }
   .content .chars {
     opacity: 0; }
@@ -844,14 +847,16 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start; }
-  .project-images .desktop-work-image {
+  .project-images .desktop-work-image-container {
     width: 44%;
-    margin: 2% 2%;
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.75); }
+    margin: 2% 2%; }
     @media screen and (max-width: 320px) {
-      .project-images .desktop-work-image {
+      .project-images .desktop-work-image-container {
         width: 90%;
         margin: 4% 2%; } }
+  .project-images .desktop-work-image {
+    width: 100%;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.75); }
   .project-images .phone-work-image {
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.75);
     width: 20%;
@@ -860,16 +865,24 @@ nav {
       .project-images .phone-work-image {
         width: 90%;
         margin: 4% 2%; } }
+  .project-images .image-info {
+    color: grey;
+    display: block;
+    text-align: center;
+    font-style: italic;
+    color: rgba(128, 128, 128, 0.5);
+    padding: 0.5rem 0; }
 
-footer .fa {
-  padding: 2rem 1rem;
-  font-size: 2rem; }
-
-footer ul {
+footer {
+  padding: 2rem 0;
   text-align: center; }
-
-footer li {
-  display: inline-block; }
+  footer .fa {
+    padding: 1rem;
+    font-size: 2rem; }
+  footer ul {
+    margin: 0; }
+  footer li {
+    display: inline-block; }
 
 #tools ul {
   display: flex;

@@ -13,6 +13,11 @@
   transform: translateX(-50%);
 }
 
+.quote {
+  font-style: italic;
+  padding: 1rem 0;
+}
+
 .inverted {
   color: white;
   background-color: #03A9F4;
@@ -50,7 +55,6 @@ h2, h3, p, ul {
 ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 li {
@@ -59,6 +63,9 @@ li {
 }
 
 h2 {
+  // font-family: "Montserrat", sans-serif;
+  // text-transform: uppercase;
+  // letter-spacing: 0.5rem;
   font-size: 4rem;
   font-weight: 400;
   @media screen and (max-width:320px) {
@@ -67,11 +74,20 @@ h2 {
   }
 }
 
+// h3 {
+//   font-size: 3rem;
+//   font-weight: 400;
+//   @media screen and (max-width:320px) {
+//     font-size: 2rem;
+//     font-weight: 500;
+//   }
+// }
+
 h3 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 400;
   @media screen and (max-width:320px) {
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 500;
   }
 }
@@ -220,7 +236,7 @@ nav {
   padding: 6rem 0;
   .text-container {
     padding: 0 1rem;
-    max-width: 42rem;
+    max-width: 44rem;
     margin: auto;
     // text-align: justify;
   }
@@ -283,14 +299,17 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  .desktop-work-image {
+  .desktop-work-image-container {
     width: 44%;
     margin: 2% 2%;
-    box-shadow: 0 0 1rem 0 rgba(0,0,0,0.75);
     @media screen and (max-width:320px) {
       width: 90%;
       margin: 4% 2%;
     }
+  }
+  .desktop-work-image {
+    width: 100%;
+    box-shadow: 0 0 1rem 0 rgba(0,0,0,0.75);
   }
   .phone-work-image {
     box-shadow: 0 0 1rem 0 rgba(0,0,0,0.75);
@@ -301,15 +320,25 @@ nav {
       margin: 4% 2%;
     }
   }
+  .image-info {
+    color: grey;
+    display: block;
+    text-align: center;
+    font-style: italic;
+    color: rgba(128, 128, 128, 0.5);
+    padding: 0.5rem 0;
+  }
 }
 
 footer {
+  padding: 2rem 0;
+  text-align: center;
   .fa {
-    padding: 2rem 1rem;
+    padding: 1rem;
     font-size: 2rem;
   }
   ul {
-    text-align: center;
+    margin: 0;
   }
   li {
     display: inline-block;

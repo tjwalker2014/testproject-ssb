@@ -14,7 +14,7 @@
     <script src="https://use.fontawesome.com/0db494dde4.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,600|Montserrat:400,700" rel="stylesheet">
     <!-- Gulp replace dev scripts and stylesheets with minified build equivalents -->
     <!-- build:css -->
     <link rel="stylesheet" href="assets/css/main.css">
@@ -33,6 +33,7 @@
       <div id="hero">
         <img id="logo" src="assets/images/justglasses.svg" alt="">
         <p>Hi I'm Tom.<br>I'm a freelance frontend<br>developer</p>
+        <!-- <p>&lt;TOM&gt;</p> -->
       </div>
       <div id="down">
         <img src="assets/images/down.svg" alt="">
@@ -41,7 +42,7 @@
     <div id="about" class="content inverted">
       <div class="text-container scramble">
         <h2 class="title">Tell Me More</h2>
-        <p>Whether you're a one-man band in need of a website, or a company looking for an approachable contract developer, you've come to the right place. Nice one.</p>
+        <p>Whether you're a one-man band in need of a website, or a company looking for an approachable contract developer, you've come to the right place. Nice one <i class="fa fa-thumbs-o-up" aria-hidden="true"></i></p>
         <p>If you'd like to have a chat <a class="section-link" href="#chat">drop me a line</a> with a few details about your project and we'll take it from there. Looking forward to working together!</p>
       </div>
     </div>
@@ -54,12 +55,18 @@
       <div class="project">
         <div class="text-container">
           <p>Status: in development</p>
-          <p>Autograph Sound supply high-spec audio equipment to the events and entertainment industries. The company already had a website, built some time ago using Flash. Ahead of a future full scale redesign they wanted the existing site rebuilt using current technology.</p>
-          <p>Part of the brief was that the original design had to be replicated as closely as possible. This represented its own set of challenges, some which I discuss in more detail in this blog post. Below are some some side-by-side screenshots.</p>
+          <p>Autograph Sound supply high-spec audio equipment to the events and entertainment industries. The company already had a website, built some time ago using Flash. Ahead of a future, full-scale redesign they wanted the existing site rebuilt using current technology.</p>
+          <p>Part of the brief was that the original design had to be replicated as closely as possible. Below are some some side-by-side screenshots.</p>
         </div>
         <div class="project-images">
-          <img class="desktop-work-image" src="assets/images/autograph-desktop1.png" alt="">
-          <img class="desktop-work-image" src="assets/images/autograph-desktop2.png" alt="">
+          <div class="desktop-work-image-container">
+            <img class="desktop-work-image" src="assets/images/autograph-desktop1.png" alt="">
+            <span class="image-info">current Flash site</span>
+          </div>
+          <div class="desktop-work-image-container">
+            <img class="desktop-work-image" src="assets/images/autograph-desktop2.png" alt="">
+            <span class="image-info">new site</span>
+          </div>
         </div>
         <div class="text-container">
           <p>Using the same colour scheme as the existing website, I also built a simple, responsive mobile site, as well as supplying an updated, vectorised version of the company logo that would scale nicely for future projects / branding.</p>
@@ -87,25 +94,25 @@
       <div class="text-container scramble">
         <h2 class="title">Tools</h2>
         <p>
-          Here are some of the tools I currently use or have enjoyed worked with at some point:
+          Here are some of the tools I currently use or have worked with at some point:
           <ul>
-            <li>sass</li>
-            <li>express</li>
-            <li>vanilla js</li>
-            <li>jquery</li>
-            <li>sketch</li>
-            <li>gulp</li>
-            <li>git</li>
-            <li>gsap</li>
-            <li>mustache</li>
-            <li>rails</li>
-            <li>angular</li>
-            <li>&hellip;</li>
+            <li><a href="https://atom.io">atom</a></li>
+            <li><a href="http://sass-lang.com">sass</a></li>
+            <li><a href="https://greensock.com/gsap">gsap</a></li>
+            <li><a href="https://jquery.com">jquery</a></li>
+            <li><a href="http://vanilla-js.com">vanilla js</a></li>
+            <li><a href="https://www.sketchapp.com">sketch</a></li>
+            <li><a href="http://gulpjs.com">gulp</a></li>
+            <li><a href="https://bower.io">bower</a></li>
+            <li><a href="https://git-scm.com">git</a></li>
+            <li><a href="http://expressjs.com">express</a></li>
+            <li><a href="http://rubyonrails.org">rails</a></li>
+            <li><a href="https://angularjs.org">angular</a></li>
           </ul>
         </p>
-        <p>Where possible I like to choose what I think are the most appropriate technologies for each project. But if you've already got an existing "stack" that's fine too - I'm happy to roll up my sleeves and get stuck in.</p>
-        <p>I also particularly enjoy working with designers and firmly believe in striving for the best user experience possible.</p>
-        <p>Specialist skills include styling, animations, general javascript and all-round problem solving.</p>
+        <p>Where possible I like to choose what I think are the most appropriate technologies for each project. If you've already got an existing "stack" that's fine too - I'm happy to roll up my sleeves and get stuck in.</p>
+        <p>I also enjoy working with designers and believe in striving for the best user experience possible.</p>
+        <p>Specialist skills include design/styling, animations, general javascript and all-round problem solving.</p>
         <p>Oh and I make a pretty mean lasagne.</p>
       </div>
     </div>
@@ -113,13 +120,16 @@
       <div class="text-container scramble">
         <h2 class="title">Likes</h2>
         <p>#humblebrag</p>
-        <p>In case you need persuading, here's a selection of nice things people have said about working with me...</p>
+        <p>In case you need persuading, here's some nice things people have said about me...</p>
+        <p class="quote">"Working with Tom was great. He evaluated our individual needs as a client and was pragmatic and flexible when we needed to make changes" - Chris, Autograph Sound</p>
+        <p class="quote">"Best cup of tea ever" - Every Colleague</p>
+        <p class="quote">"Who's Tom?" - Anonymous</p>
       </div>
     </div>
     <div id="chat" class="content inverted">
       <div class="text-container scramble">
         <h2 class="title">Let's Talk</h2>
-        <p>Questions? Jokes? Your favourite beer? You can reach me at:</p>
+        <p>Questions? Jokes? You can reach me at:</p>
         <p><a href="mailto:hi@clevertom.com">hi@clevertom.com</a></p>
         <p>That's right, old-school email. I'm also on <a href="https://uk.linkedin.com/in/tommers-walker">LinkedIn</a> if that's what you're into. Or there’s <a href="https://github.com/tommers-walker">Github</a> for my fellow techies.</p>
       </div>
@@ -127,11 +137,21 @@
     <div id="extra" class="content">
       <div class="text-container scramble">
         <h2 class="title">Extra</h2>
-        <p>Things I like</p>
+        <p>Things I like:</p>
         <ul>
-          <li></li>
+          <li><a href="http://www.awwwards.com">awwwards.com</a></li>
+          <li><a href="http://unsplash.co">unsplash.co</a></li>
+          <li><a href="https://thenounproject.com">thenounproject.com</a></li>
+          <li><a href="http://fontawesome.io">fontawesome.io</a></li>
+          <li><a href="www.thewriter.co">thewriter.co</a></li>
+          <li><a href="https://www.cloudflare.com">cloudflare.com</a></li>
+          <li><a href="https://tympanus.net/codrops">tympanus.net/codrops</a></li>
         </ul>
-        <p>What I'm listening to</p>
+        <br>
+        <p>Credits:</p>
+        <p>This site is coded in <a href="https://atom.io">Atom</a>, compiled with <a href="http://sass-lang.com">Sass</a> and <a href="http://gulpjs.com">Gulp</a>, hosted on <a href="https://www.heroku.com">Heroku</a> and served by <a href="https://www.cloudflare.com">Cloudflare</a>.</p>
+        <p>Fonts by <a href="https://fonts.google.com">Google</a>, icons by <a href="https://thenounproject.com/unlimicon">unlimicon</a>, <a href="https://jonsuh.com/hamburgers">Jon Suh</a> and <a href="http://fontawesome.io">Font Awesome</a>.</p>
+        <p>I also like to try out/make/break things, so from time to time this site might look or behave differently. Think of it as being in a semi-constant state of beta :)</p>
       </div>
     </div>
     <nav id="menu">
@@ -149,6 +169,7 @@
         <li><a href="https://github.com/tommers-walker"><i class="fa fa-github-alt" aria-hidden="true"></i></a></li>
         <li><a href="mailto:hi@clevertom.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
       </ul>
+      <span>version 0.1.0</span>
     </footer>
   </body>
 </html>
